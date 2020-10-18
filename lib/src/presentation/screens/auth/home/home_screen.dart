@@ -39,6 +39,19 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'FINDVITY',
+          style: titleText,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            color: primaryColor,
+            icon: Icon(Icons.notifications),
+          )
+        ],
+      ),
       body: _pageList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: false,

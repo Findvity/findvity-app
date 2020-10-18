@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 Color primaryColor = Color(0xFF3C718D);
-Color accentColor = Color(0xFFFE8080);
+// Color accentColor = Color(0xFFFE8080);
+Color accentColor = primaryColor;
 Color canvasColor = Color(0xFFF6F6F6);
 
 final titleText = TextStyle(

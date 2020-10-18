@@ -13,19 +13,6 @@ class Feed extends StatelessWidget {
         foregroundColor: Colors.white,
         child: Icon(Icons.add),
       ),
-      appBar: AppBar(
-        title: Text(
-          'FINDVITY',
-          style: titleText,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            color: primaryColor,
-            icon: Icon(Icons.notifications),
-          )
-        ],
-      ),
       body: SingleChildScrollView(
         // padding: EdgeInsets.all(16),
         physics: BouncingScrollPhysics(),
@@ -55,56 +42,92 @@ class Feed extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                borderRadius: borderRadiusButton,
-                color: Colors.white,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.all(8),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 10,
-                        ),
-                        Spacer(),
-                        Text(
-                          "Posted in 'Weekend Sports'",
-                          style: smallText.copyWith(
-                            fontSize: 12,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Image.network(
-                    "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-                    fit: BoxFit.cover,
-                    height: MediaQuery.of(context).size.width * 0.5,
-                    width: double.maxFinite,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      IconButton(
-                        padding: EdgeInsets.zero,      
-                        onPressed: (){},
-                        icon: Icon(Icons.favorite),
-                      )
-                    ],
-                  ),
-                ],
-              ),
+            buildImage(
+              context,
+              "https://images.unsplash.com/photo-1529768167801-9173d94c2a42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+              "Weekend Sports",
+            ),
+            buildImage(
+              context,
+              "https://images.unsplash.com/photo-1602826949135-89af2c1e1b6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80",
+              "Travelling Theory",
+            ),
+            buildImage(
+              context,
+              "https://images.unsplash.com/photo-1553729784-e91953dec042?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+              "Readers escape",
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Container buildImage(BuildContext context, String url, String group) {
+    return Container(
+      margin: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        borderRadius: borderRadiusButton,
+        color: Colors.white,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(8),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 10,
+                ),
+                Spacer(),
+                Text(
+                  "Posted in '$group'",
+                  style: smallText.copyWith(
+                    fontSize: 12,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Image.network(
+            url,
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.width * 0.5,
+            width: double.maxFinite,
+          ),
+          Row(
+            children: [
+              IconButton(
+                padding: EdgeInsets.zero,
+                onPressed: () {},
+                icon: Icon(
+                  Icons.favorite_border,
+                  color: Colors.grey,
+                ),
+              ),
+              IconButton(
+                padding: EdgeInsets.zero,
+                onPressed: () {},
+                icon: Icon(
+                  Icons.comment,
+                  color: Colors.grey,
+                ),
+              ),
+              Spacer(),
+              Container(
+                margin: EdgeInsets.only(right: 16),
+                child: CircleAvatar(
+                  radius: 14,
+                  backgroundColor: accentColor,
+                  foregroundColor: Colors.white,
+                  child: Icon(Icons.navigate_next),
+                ),
+              )
+            ],
+          ),
+        ],
       ),
     );
   }

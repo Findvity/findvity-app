@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'styles.dart';
 
 ThemeData themeData = ThemeData(
-  accentColor: accentColor,
+  accentColor: primaryColor,
   canvasColor: canvasColor,
   primaryColor: primaryColor,
   fontFamily: 'Josefin-Sans',
