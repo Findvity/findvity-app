@@ -1,16 +1,15 @@
-# findvity_app
+# Findvity App
 
-A new Flutter project.
+Made with :coffee: and Flutter
 
-## Getting Started
+# Screenshots
 
-This project is a starting point for a Flutter application.
+<img  alt="splash" src="https://raw.githubusercontent.com/Findvity/findvity-app/main/screenshots/mockups/1603055475801.png" height="500">
 
-A few resources to get you started if this is your first Flutter project:
+<img  alt="splash" src="https://raw.githubusercontent.com/Findvity/findvity-app/main/screenshots/mockups/1603055475801.png" height="500">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img  alt="splash" src="https://raw.githubusercontent.com/Findvity/findvity-app/main/screenshots/mockups/1603055475801.png" height="500">
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img  alt="splash" src="https://raw.githubusercontent.com/Findvity/findvity-app/main/screenshots/mockups/1603055475801.png" height="500">
+
+<img  alt="splash" src="https://raw.githubusercontent.com/Findvity/findvity-app/main/screenshots/mockups/1603055475801.png" height="500">
