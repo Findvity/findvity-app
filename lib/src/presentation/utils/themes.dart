@@ -60,6 +60,6 @@ class CustomSharedAxisTransition extends CustomTransition {
 final systemTheme = SystemUiOverlayStyle(
   statusBarBrightness: Brightness.light,
   statusBarColor: Colors.transparent,
-  statusBarIconBrightness: Brightness.light,
+  statusBarIconBrightness: Brightness.dark,
   systemNavigationBarIconBrightness: Brightness.light,
 );

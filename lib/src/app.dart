@@ -27,6 +27,13 @@ class Findvity extends StatelessWidget {
             sharedAxisTransitionType: SharedAxisTransitionType.scaled,
           ),
         ),
+        GetPage(
+          name: OnboardingScreen.routename,
+          page: () => OnboardingScreen(),
+          customTransition: CustomSharedAxisTransition(
+            sharedAxisTransitionType: SharedAxisTransitionType.vertical,
+          ),
+        ),
       ],
     );
   }

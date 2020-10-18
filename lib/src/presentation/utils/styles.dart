@@ -12,4 +12,10 @@ final titleText = TextStyle(
   letterSpacing: 5.67,
 );
 
+final heading = TextStyle(
+  fontSize: 22,
+  color: primaryColor,
+  fontWeight: FontWeight.w300
+);
+
 final borderRadiusButton = BorderRadius.circular(10);

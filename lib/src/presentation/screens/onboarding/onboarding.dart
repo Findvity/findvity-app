@@ -64,6 +64,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: Stack(
         alignment: Alignment.center,
         children: [
+          Positioned(
+            top: 32,
+            left: 16,
+            child: SafeArea(
+              child: Text(
+                'FINDVITY',
+                style: titleText,
+              ),
+            ),
+          ),
           PageView.builder(
             physics: BouncingScrollPhysics(),
             onPageChanged: _onPageChanged,
@@ -88,6 +98,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        margin: EdgeInsets.all(24),
+        height: 44,
+        child: RaisedButton(
+          elevation: 0,
+          onPressed: () {},
+          child: Text('CONTINUE'),
+          textColor: Colors.white,
+        ),
       ),
     );
   }

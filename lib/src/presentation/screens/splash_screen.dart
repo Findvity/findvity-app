@@ -1,8 +1,9 @@
-import 'package:findvity_app/src/presentation/screens/onboarding/onboarding.dart';
-import 'package:findvity_app/src/presentation/utils/assets.dart';
-import 'package:findvity_app/src/presentation/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../utils/assets.dart';
+import '../utils/styles.dart';
+import 'onboarding/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   static const routename = '/';
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(milliseconds: 500), () {
-      Get.off(OnboardingScreen());
+      Get.offNamed(OnboardingScreen.routename);
     });
   }
 
