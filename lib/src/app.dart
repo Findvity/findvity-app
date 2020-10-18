@@ -1,11 +1,12 @@
 import 'package:animations/animations.dart';
-import 'package:findvity_app/src/presentation/screens/auth/login/login.dart';
-import 'package:findvity_app/src/presentation/screens/auth/sign_up/sign_up.dart';
-import 'package:findvity_app/src/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'presentation/screens/auth/home/home_screen.dart';
+import 'presentation/screens/auth/login/login.dart';
+import 'presentation/screens/auth/sign_up/sign_up.dart';
 import 'presentation/screens/onboarding/onboarding.dart';
+import 'presentation/screens/splash_screen.dart';
 import 'presentation/utils/themes.dart';
 
 class Findvity extends StatelessWidget {
@@ -48,6 +49,13 @@ class Findvity extends StatelessWidget {
           page: () => LoginScreen(),
           customTransition: CustomSharedAxisTransition(
             sharedAxisTransitionType: SharedAxisTransitionType.horizontal,
+          ),
+        ),
+        GetPage(
+          name: Homescreen.routename,
+          page: () => Homescreen(),
+          customTransition: CustomSharedAxisTransition(
+            sharedAxisTransitionType: SharedAxisTransitionType.scaled,
           ),
         ),
       ],

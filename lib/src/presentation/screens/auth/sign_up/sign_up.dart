@@ -1,11 +1,12 @@
-import 'package:findvity_app/src/presentation/screens/auth/login/login.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import '../../../widgets/show_up.dart';
-import 'package:flutter/material.dart';
 import '../../../utils/styles.dart';
+import '../../../widgets/show_up.dart';
+import '../home/home_screen.dart';
+import '../login/login.dart';
 
 class RegisterScreen extends StatefulWidget {
   static const routename = "/register";
@@ -266,9 +267,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           textColor: Colors.white,
                           elevation: 0,
                           onPressed: () {
-                            if (_formkey.currentState.validate()) {
-                              SystemChannels.textInput.invokeMethod('TextInput.hide');
-                            }
+                            // if (_formkey.currentState.validate()) {
+                            //   SystemChannels.textInput.invokeMethod('TextInput.hide');
+                            // }
+                            Get.offNamed(Homescreen.routename);
                           },
                         ),
                       ),

@@ -1,11 +1,12 @@
-import 'package:findvity_app/src/presentation/screens/auth/sign_up/sign_up.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import '../../../widgets/show_up.dart';
-import 'package:flutter/material.dart';
 import '../../../utils/styles.dart';
+import '../../../widgets/show_up.dart';
+import '../home/home_screen.dart';
+import '../sign_up/sign_up.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routename = "/login";
@@ -147,9 +148,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           textColor: Colors.white,
                           elevation: 0,
                           onPressed: () {
-                            if (_formkey.currentState.validate()) {
-                              SystemChannels.textInput.invokeMethod('TextInput.hide');
-                            }
+                            // if (_formkey.currentState.validate()) {
+                            //   SystemChannels.textInput.invokeMethod('TextInput.hide');
+                            // }
+                            Get.offNamed(Homescreen.routename);
                           },
                         ),
                       ),
