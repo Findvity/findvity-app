@@ -1,6 +1,11 @@
 # Findvity App
 
+Our small contribution to bringing normalcy after the world heals from covid-19 pandemic
+
 Made with :coffee: and Flutter
+
+# App
+Release can be found [here](https://github.com/Findvity/findvity-app/releases/tag/hacktheu)
 
 # Screenshots
 <img  alt="splash" src="https://raw.githubusercontent.com/Findvity/findvity-app/main/screenshots/mockups/1603055475801.png" height="500">
