@@ -1,8 +1,9 @@
 import 'package:animations/animations.dart';
+import 'package:findvity_app/src/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'presentation/screens/onboarding.dart';
+import 'presentation/screens/onboarding/onboarding.dart';
 import 'presentation/utils/themes.dart';
 
 class Findvity extends StatelessWidget {
@@ -13,12 +14,20 @@ class Findvity extends StatelessWidget {
       theme: themeData,
       themeMode: ThemeMode.light,
       enableLog: true,
-      // initialRoute: HomeScreen.routename,
-      home: OnboardingScreen(),
+      initialRoute: SplashScreen.routename,
       transitionDuration: Duration(milliseconds: 500),
       customTransition: CustomSharedAxisTransition(
         sharedAxisTransitionType: SharedAxisTransitionType.scaled,
       ),
+      getPages: [
+        GetPage(
+          name: SplashScreen.routename,
+          page: () => SplashScreen(),
+          customTransition: CustomSharedAxisTransition(
+            sharedAxisTransitionType: SharedAxisTransitionType.scaled,
+          ),
+        ),
+      ],
     );
   }
 }
