@@ -13,6 +13,7 @@ class Page2 extends StatelessWidget {
         Lottie.asset(
           yoga,
           height: 250,
+          frameRate: FrameRate.max,
         ),
         SizedBox(
           height: 36,

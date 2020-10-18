@@ -16,49 +16,56 @@ class Findvity extends StatelessWidget {
       title: 'Findvity',
       theme: themeData,
       themeMode: ThemeMode.light,
-      enableLog: true,
+      // enableLog: true,
       initialRoute: SplashScreen.routename,
       transitionDuration: Duration(milliseconds: 500),
       customTransition: CustomSharedAxisTransition(
-        sharedAxisTransitionType: SharedAxisTransitionType.scaled,
+      sharedAxisTransitionType: SharedAxisTransitionType.scaled,
       ),
-      getPages: [
-        GetPage(
-          name: SplashScreen.routename,
-          page: () => SplashScreen(),
-          customTransition: CustomSharedAxisTransition(
-            sharedAxisTransitionType: SharedAxisTransitionType.scaled,
-          ),
-        ),
-        GetPage(
-          name: OnboardingScreen.routename,
-          page: () => OnboardingScreen(),
-          customTransition: CustomSharedAxisTransition(
-            sharedAxisTransitionType: SharedAxisTransitionType.vertical,
-          ),
-        ),
-        GetPage(
-          name: RegisterScreen.routename,
-          page: () => RegisterScreen(),
-          customTransition: CustomSharedAxisTransition(
-            sharedAxisTransitionType: SharedAxisTransitionType.horizontal,
-          ),
-        ),
-        GetPage(
-          name: LoginScreen.routename,
-          page: () => LoginScreen(),
-          customTransition: CustomSharedAxisTransition(
-            sharedAxisTransitionType: SharedAxisTransitionType.horizontal,
-          ),
-        ),
-        GetPage(
-          name: Homescreen.routename,
-          page: () => Homescreen(),
-          customTransition: CustomSharedAxisTransition(
-            sharedAxisTransitionType: SharedAxisTransitionType.scaled,
-          ),
-        ),
-      ],
+      routes: {
+        SplashScreen.routename: (_) => SplashScreen(),
+        OnboardingScreen.routename: (_) => OnboardingScreen(),
+        RegisterScreen.routename: (_) => RegisterScreen(),
+        LoginScreen.routename: (_) => LoginScreen(),
+        Homescreen.routename: (_) => Homescreen(),
+      },
+      // : [
+      //   GetPage(
+      //     name: SplashScreen.routename,
+      //     page: () => SplashScreen(),
+      //     customTransition: CustomSharedAxisTransition(
+      //       sharedAxisTransitionType: SharedAxisTransitionType.scaled,
+      //     ),
+      //   ),
+      //   GetPage(
+      //     name: OnboardingScreen.routename,
+      //     page: () => OnboardingScreen(),
+      //     customTransition: CustomSharedAxisTransition(
+      //       sharedAxisTransitionType: SharedAxisTransitionType.vertical,
+      //     ),
+      //   ),
+      //   GetPage(
+      //     name: RegisterScreen.routename,
+      //     page: () => RegisterScreen(),
+      //     customTransition: CustomSharedAxisTransition(
+      //       sharedAxisTransitionType: SharedAxisTransitionType.horizontal,
+      //     ),
+      //   ),
+      //   GetPage(
+      //     name: LoginScreen.routename,
+      //     page: () => LoginScreen(),
+      //     customTransition: CustomSharedAxisTransition(
+      //       sharedAxisTransitionType: SharedAxisTransitionType.horizontal,
+      //     ),
+      //   ),
+      //   GetPage(
+      //     name: Homescreen.routename,
+      //     page: () => Homescreen(),
+      //     customTransition: CustomSharedAxisTransition(
+      //       sharedAxisTransitionType: SharedAxisTransitionType.scaled,
+      //     ),
+      //   ),
+      // ],
     );
   }
 }

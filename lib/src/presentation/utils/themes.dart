@@ -38,6 +38,9 @@ ThemeData themeData = ThemeData(
     fillColor: Colors.grey[200],
     filled: true,
   ),
+  pageTransitionsTheme: PageTransitionsTheme(builders: {
+    TargetPlatform.android: ZoomPageTransitionsBuilder(),
+  }),
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 

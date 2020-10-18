@@ -24,33 +24,27 @@ class _HomescreenState extends State<Homescreen> {
   @override
   void initState() {
     super.initState();
-    SystemChrome.setSystemUIOverlayStyle(systemTheme.copyWith(
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: accentColor,
       systemNavigationBarDividerColor: accentColor,
     ));
   }
 
+  _onPageSelected(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'FINDVITY',
-          style: titleText,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            color: primaryColor,
-            icon: Icon(Icons.notifications),
-          )
-        ],
-      ),
       body: _pageList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: false,
         showSelectedLabels: false,
         currentIndex: _currentIndex,
+        onTap: _onPageSelected,
         unselectedItemColor: Colors.black45,
         items: [
           BottomNavigationBarItem(
@@ -58,11 +52,11 @@ class _HomescreenState extends State<Homescreen> {
             title: Text(''),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
+            icon: Icon(Icons.home),
             title: Text(''),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
+            icon: Icon(Icons.forum),
             title: Text(''),
           ),
         ],
