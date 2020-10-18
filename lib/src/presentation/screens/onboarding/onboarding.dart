@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../utils/styles.dart';
+import '../auth/sign_up/sign_up.dart';
 import 'page_1.dart';
 import 'page_2.dart';
 import 'page_3.dart';
@@ -104,7 +106,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         height: 44,
         child: RaisedButton(
           elevation: 0,
-          onPressed: () {},
+          onPressed: ()=>Get.offNamed(RegisterScreen.routename),
           child: Text('CONTINUE'),
           textColor: Colors.white,
         ),

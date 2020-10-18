@@ -30,9 +30,16 @@ ThemeData themeData = ThemeData(
       borderRadius: borderRadiusButton,
     ),
   ),
+  inputDecorationTheme: InputDecorationTheme(
+    border: OutlineInputBorder(
+      borderRadius: borderRadiusButton,
+      borderSide: BorderSide.none,
+    ),
+    fillColor: Colors.grey[200],
+    filled: true,
+  ),
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
-
 
 class CustomSharedAxisTransition extends CustomTransition {
   SharedAxisTransitionType sharedAxisTransitionType;
@@ -61,5 +68,5 @@ final systemTheme = SystemUiOverlayStyle(
   statusBarBrightness: Brightness.light,
   statusBarColor: Colors.transparent,
   statusBarIconBrightness: Brightness.dark,
-  systemNavigationBarIconBrightness: Brightness.light,
+  systemNavigationBarIconBrightness: Brightness.dark,
 );

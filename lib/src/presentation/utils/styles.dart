@@ -18,4 +18,10 @@ final heading = TextStyle(
   fontWeight: FontWeight.w300
 );
 
+final smallText = TextStyle(
+  fontSize: 14,
+  color: primaryColor,
+  fontWeight: FontWeight.w500,
+);
+
 final borderRadiusButton = BorderRadius.circular(10);
